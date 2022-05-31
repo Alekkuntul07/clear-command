@@ -1,0 +1,17 @@
+bot.command({
+  name: "clear",
+  code: `$deleteIn[1s]
+ Successfully deleted $message[1] messages
+ $wait[1s]
+ $clear[$message[1];$authorID;$channelID]
+ $onlyIf[$message[1]>=0;I can't 0 messages]
+ $onlyIf[$isNumber[$message[1]]==true;Hey you need to specify how many messages you want me to purge with a valid number]
+ $onlyPerms[managemessages;You don't have \`MANAGE MESSAGES\` permission]
+ $onlyBotPerms[managemessages;I don't have \`MANAGE MESSAGES\` permission]
+ $suppressErrors`
+})
+
+
+
+subscribe my youtube
+https://www.youtube.com/channel/UCXLqf8iEB_fV003L02BSKTQ
